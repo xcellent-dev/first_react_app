@@ -1,0 +1,16 @@
+@import 'utils';
+
+.common.responsive {
+  width: 912px;
+  margin: 0 auto;
+  @include media("<huge") {
+    width: $large-w;
+  }
+  
+  @include media("<medium") {
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+}

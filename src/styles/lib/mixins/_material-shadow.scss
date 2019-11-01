@@ -1,0 +1,15 @@
+@mixin material-shadow($z-depth: 1) {
+  @if $z-depth == 1 {
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, .15);
+  }
+  @if $z-depth == 2 {
+    box-shadow: 10px 12px 55px 0 rgba(0,0,0,0.15);
+  }
+
+  @if $z-depth == 3 {
+    box-shadow: 8px 10px 100px -10px rgba(0, 0, 0, .15);
+  }
+  @if ($z-depth < 1) or ($z-depth > 5) {
+    @warn "$z-depth must be between 1 and 5";
+  }
+}

@@ -1,0 +1,55 @@
+@import 'utils';
+
+.chartsbody {
+  background-color: #18223C;  
+
+  .sub_title {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 40px;
+
+    span {
+      font-size: 22px;
+      margin-left: 10px;
+    }
+  }
+  .btn_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    div {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  .chartsico {
+    display: grid;
+    grid-gap: 15px;
+    list-style-type: none;
+
+    @media screen and (min-width: 576px) {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media screen and (min-width: 768px) {
+      & {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .chartsico__item {
+      display: relative;
+      justify-content: center;
+
+      figcaption {
+        margin-top: 10px;
+        font-weight: 500;
+        text-align: right;
+        color: #FFF;
+        font-family: 'Rubik-Regular';
+      }
+    }
+  }
+}

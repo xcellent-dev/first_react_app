@@ -1,0 +1,23 @@
+@import 'utils';
+
+.doughnut-wrapper {
+  position: relative;
+  width: 200px;
+  .spinner {
+    margin-left: 100px;
+  }
+
+  p {
+    margin: 0px;
+    margin-top:15px;
+    color: white;
+    text-align: center;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin-top: -10px;
+  }
+}
