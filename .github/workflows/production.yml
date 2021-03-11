@@ -23,11 +23,11 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-	  exclude:
+	  exclude: .git*
 	    - .git*/**
-	    - **/.git*/**
-	    - config/jest/*
-	    - src/components/*
+	    -  **/.git*/**
+	    - config/**
+	    - src/**/*
           local-dir: "./"
           remoteDir: "public_html_template/"
           options: ""
