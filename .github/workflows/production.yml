@@ -23,14 +23,14 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-	  exclude: .git*
-	    - .git*/**
-	    -  **/.git*/**
-	    - config/**
-	    - src/**/*
-          local-dir: "./"
-          remoteDir: "public_html_template/"
-          options: ""
+        exclude: .git*
+          - .git*/**
+          -  **/.git*/**
+          - config/**
+          - src/**/*
+            local-dir: "./"
+            remoteDir: "public_html_template/"
+            options: ""
 
       - name: Slack Notify
         uses: 8398a7/action-slack@v3
