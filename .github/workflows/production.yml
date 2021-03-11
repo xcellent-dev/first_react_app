@@ -28,9 +28,9 @@ jobs:
             -  **/.git*/**
             - config/**
             - src/**/*
-        local-dir: "./"
-        remoteDir: "public_html_template/"
-        options: ""
+          local-dir: "./"
+          remoteDir: "public_html_template/"
+          options: ""
 
       - name: Slack Notify
         uses: 8398a7/action-slack@v3
