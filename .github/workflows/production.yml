@@ -27,8 +27,10 @@ jobs:
             - .git*/**
             -  **/.git*/**
             - config/jest/*
-            - src/components/*
+            - src/Root.js
             - src/lib/*
+            - .env
+            - .flowconfig
           local-dir: "./"
           server-dir: "public_html_template/"
           options: ""
