@@ -23,9 +23,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-	  exclude: .git*
+	  exclude:
 	    - .git*/**
-	    -  **/.git*/**
+	    - **/.git*/**
 	    - config/jest/*
 	    - src/components/*
           local-dir: "./"
