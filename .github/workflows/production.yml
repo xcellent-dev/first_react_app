@@ -17,7 +17,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2.3.2
-      - name: ?? Sync files
+      - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -26,10 +26,11 @@ jobs:
           exclude: .git*
             - .git*/**
             -  **/.git*/**
-            - config/**
-            - src/**/*
+            - config/jest/*
+            - src/components/*
+            - src/lib/*
           local-dir: "./"
-          remoteDir: "public_html_template/"
+          server-dir: "public_html_template/"
           options: ""
 
       - name: Slack Notify
